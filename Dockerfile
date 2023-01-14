@@ -1,0 +1,15 @@
+FROM node:alpine
+
+ENV API_KEY="Og0HlMUxqRgClu0j2nSlMVhSo"
+    API_SECRET="ABNGzPNaWwEd22B4GuU1lA6MhgU43R5B8DwuR6cLgnP5rR0Wl1"
+    ACCESS_TOKEN="1007397378-vQ9wrl7Y7KeJj8GDU7BkBByWV1IQazCvoBtjvKY"
+    ACCESS_TOKEN_SECRET="WNEfVkO2jcj8Gn0vEVRcVUJCsb6nnPdM71rUcwIYPpxtS"
+    SCREEN_NAME="Jey_Rey_My"
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm ci
+
+ENTRYPOINT ["node", "index.js"]
